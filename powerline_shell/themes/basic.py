@@ -43,3 +43,6 @@ class Color(DefaultColor):
 
     TIME_FG = 8
     TIME_BG = 7
+
+    NODE_FG = 14
+    NODE_BG = 4

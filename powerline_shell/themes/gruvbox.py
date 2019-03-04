@@ -109,3 +109,6 @@ class Color(DefaultColor):
 
     TIME_FG = light2
     TIME_BG = dark4
+
+    NODE_FG = 14
+    NODE_BG = 17
