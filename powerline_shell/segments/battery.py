@@ -22,7 +22,10 @@ class Segment(BasicSegment):
             import re
             source = check_output(["pmset", "-g", "batt"]).strip().decode()
             # capacity
-            cap = int(re.findall(r"[0-9]{1,3}%", source)[0][:-1])
+            battpct = re.findall(r"[0-9]{1,3}%", source)
+            if len(battpct) == 0:
+                return
+            cap = int(battpct[0][:-1])
             status_source = source[source.find(";") + 2: source.rfind(";")]
 
             if status_source == "charged":
