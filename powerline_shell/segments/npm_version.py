@@ -14,4 +14,4 @@ class Segment(ThreadedSegment):
         self.join()
         if self.version:
             # FIXME no hard-coded colors
-            self.powerline.append("npm " + self.version, 15, 18)
+            self.powerline.append("📦 " + self.version, 15, 18)
