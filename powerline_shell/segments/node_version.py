@@ -15,4 +15,5 @@ class Segment(ThreadedSegment):
         if not self.version:
             return
         # FIXME no hard-coded colors
-        self.powerline.append("node " + self.version, 15, 18)
+        self.powerline.append(" ⬢ ", 144, self.powerline.theme.NODE_BG, "")
+        self.powerline.append(self.version, self.powerline.theme.NODE_FG, self.powerline.theme.NODE_BG)
